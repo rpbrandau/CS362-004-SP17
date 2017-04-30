@@ -1,0 +1,25 @@
+--------------TESTING CARD: smithy --------------
+TEST 1: Drawing 3 cards
+hand count = 4, expected = 7
+TEST 1: FAIL
+TEST 2: Draw Pile State
+deck count = 5, expected = 2
+TEST 2: FAIL
+TEST 3: Player's Actions
+Action count = 1, expected = 1
+TEST 3: PASS
+TEST 4: Player's Buys
+Buy count = 1, expected = 1
+TEST 4: PASS
+TEST 5: Victory card states
+Estate:    8,   expected: 8
+Duchy:    8,   expected: 8
+Province: 46,   expected: 46
+Estates... check
+Duchys... check
+Provinces... check
+TEST 5: PASS
+
+------------TESTING of smithy COMPLETE--------------
+Tests passed: 3
+Tests failed: 2
