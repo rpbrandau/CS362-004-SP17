@@ -1,0 +1,48 @@
+Riley Brandau
+CS 362 - Assignment 5
+
+Bugs found in teammate's code
+------------------------------------------------------------------------
+
+Initial findings:
+
+Card: playAdventurer
+Bug: I was able to identify a bug in the Adventurer card’s code by visual inspection. The “drawCard” portion of the code had been removed
+Symptom: I assume this will cause the player to shift all of the cards from their hand into a temphand, that will then be discarded. This should happen, unless they have two treasure cards in their hand. If they have two treasure cards, all of the cards prior to the second treasure (not including the first treasure card) will be shifted to the temphand and will ultimately be discarded.
+Severity: 8/10 – depending on the players hand, this bug could at worst discard their entire hand, and at best do nothing.
+
+Card: playCouncilRoom
+Bug: I was able to identify a bug in the Council Room card’s code by visual inspection. The bug was using “--“ instead of “++”. 
+Symptom: This would cause the player to lose a Buy instead of gain one.
+Severity: 5/10 – After thinking about it for a little bit, this bug is actually worse than it looks. Not only does it rob the player of an action (by playing council room), the card goes on to rob the player of their buys, effectively ending their turn early.
+
+Card: playSmithy
+Bug: I was able to identify a bug in the Smithy card’s code by visual inspection. The bug was using a “<=” instead of “<” in a for loop’s conditional. 
+Symptom: This would cause the player to draw four cards instead of three.
+Severity: 2/10 – This is the only advantageous bug out of the bunch. It doesn’t ruin the current player’s turn, but rather gives them a slight advantage by letting them draw an extra card.
+
+Card: playSteward
+Bug: I was not able to identify any bugs in the code prior to testing.
+
+
+Card: playVillage
+Bug: I was not able to identify any bugs in the code prior to testing.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After running tests:
+
+Card: playAdventurer
+Bug discussion: The bug that was stated before was evident after running a card test. However, since a starting hand is mainly made up of copper and estates, it would only be discovered early on by comparing anticipated hand and discard pile sizes.
+
+Card: playCouncilRoom
+Bug discussion: The bug was easily detected by my card test when looking at the amount of player’s buys.
+
+Card: playSmithy
+Bug discussion: The bug was easily detected by my card test when comparing hand and deck count.
+
+Card: playSteward
+Bug: No bug was found for this card after testing.
+
+Card: playVillage
+Bug: No bug was found for this card after testing.
